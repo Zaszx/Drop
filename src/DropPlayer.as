@@ -3,12 +3,6 @@ package
 	import org.flixel.*;
 	public class DropPlayer extends FlxSprite 
 	{
-		[Embed (source = "images/running.png")] private var _running:Class;
-		[Embed (source = "images/reverserunning.png")] private var _reverserunning:Class;
-		[Embed (source = "images/spiritrunning.png")] private var _spiritrunning:Class;
-		[Embed (source = "images/spiritreverserunning.png")] private var _spiritreverserunning:Class;
-		
-		private var jumpSpeed:int = 250;
 		private var isPlayerOne:Boolean;
 		
 		private var bullet:DropBullet;
@@ -29,13 +23,13 @@ package
 			isPlayerOne = one;
 			if (!isPlayerOne) 
 			{
-				loadGraphic(_spiritrunning, true, false, 40, 40);
+				loadGraphic(Assets._spiritRunningRight, true, false, 40, 40);
 				addAnimation("right", [0, 1, 2, 3, 4, 5, 6], 10, true);
 				addAnimation("idleright", [6], 5, true);
 			}
 			else
 			{
-				loadGraphic(_running, true, false, 40, 40);
+				loadGraphic(Assets._spikeRunningRight, true, false, 40, 40);
 				addAnimation("right", [0, 1, 2, 3, 4, 5, 6], 10, true);
 				addAnimation("idleright", [6], 5, true);
 			}
